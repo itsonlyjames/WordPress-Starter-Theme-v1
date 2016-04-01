@@ -46,7 +46,6 @@ function remove_wp_ver_css_js( $src ) {
 	return $src;
 }
 
-
 // CSS & Javascript Assets
 function assets() {
 	global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
@@ -77,7 +76,6 @@ register_nav_menus(
 
 // Sample Image Size
 add_image_size( 'sample-size', 1200, 800, true );
-
 
 // Require custom post types from post-types
 // Put Taxonomies that are related to a Post Type in the same file unless taxonomy relates to multiple post types
@@ -111,7 +109,6 @@ function new_excerpt_more( $more ) {
 	return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
-
 
 // Function used to display custom maintenance page
 // This way we can keep the page within the theme as well as within Git
