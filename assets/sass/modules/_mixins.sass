@@ -1,0 +1,71 @@
+// Mixins
+
+// Mixin for setting vendor prefixed CSS
+// Simply include in your mixin
+// =transition($args...)
+//   +prefix(transition, all $args ease-in-out)
+$prefixes: o ms moz webkit
+=prefix($property, $value)
+  #{$property}: $value
+  @each $prefix in $prefixes
+    -#{$prefix}-#{$property}: $value
+
+// Sets the font size in rem's with a px fallback
+// +font-size(12)
+=font-size($sizeValue: 12)
+  font-size: $sizeValue + px //fallback for old browsers
+  font-size: (0.125 * $sizeValue) + rem
+
+
+// Mixin for media queries
+// +break($size)
+=break($size)
+  @media only screen and (max-width: $size)
+    @content
+
+// Example breakpoints
+$deskmax: 1170px
+$lgDesk: 1600px
+$mdDesk: 1200px
+$mobile: 768px
+$phone: 480px
+$smPhone: 360px
+
+// Mixin for transition
+// +transition(2s)
+=transition($args, $easing: ease-in-out)
+  +prefix(transition, all $args $easing)
+
+// Center block horizontally
+// +center-block
+=center-block
+  display: block
+  margin-left: auto
+  margin-right: auto
+
+// Mixin for centering object
+// Vertically or horizontally
+// +center(0, -50%)
+// +center(-50%, 0)
+=center($args...)
+  +prefix(transform, translate($args))
+
+// Box-sizing helper
+// +box-sizing(border-box)
+=box-sizing($type)
+  +prefix(box-sizing, $type)
+
+=resetlist
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+//Mixin for clearfix
+// +trueclear
+=trueclear
+  &:before,
+  &:after
+    content: " "
+    display: table
+  &:after
+    clear: both

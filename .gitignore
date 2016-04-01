@@ -1,0 +1,45 @@
+# Codekit
+config.codekit
+
+# SASS
+*.sass-cache*
+
+# OSX Stuff
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must ends with two \r.
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# WordPress Install
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/wp-total-cache-config.php
+wp-content/w3-total-cache-config.php
+wp-content/plugins/wordfence/tmp/configCache.php
+sitemap.xml
+*.log
+wp-content/cache/
+wp-content/backups/
+sitemap.xml.gz
+wp-config.php
+
+error_log
+
+# Node modules
+node_modules
+
+# Concat js
+assets/js/all.js
