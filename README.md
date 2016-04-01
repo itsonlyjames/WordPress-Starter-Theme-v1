@@ -1,7 +1,7 @@
 # WordPress Starter Theme v1
 
 ## Author:
-* James Alexandre - james@jamesalexandre.com
+James Alexandre - james@jamesalexandre.com
 
 ## Install Instructions
 
