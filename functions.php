@@ -112,6 +112,9 @@ function new_excerpt_more( $more ) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
+
+// Function used to display custom maintenance page
+// This way we can keep the page within the theme as well as within Git
 if ( ! function_exists( 'wpse84987_maintenance_mode' ) ) {
     function wpse84987_maintenance_mode() {
         if ( file_exists( ABSPATH . '.maintenance' ) ) {
