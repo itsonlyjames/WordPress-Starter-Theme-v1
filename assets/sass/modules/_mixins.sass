@@ -60,7 +60,7 @@ $smPhone: 360px
   margin: 0
   padding: 0
 
-//Mixin for clearfix
+// Mixin for clearfix
 // +trueclear
 =trueclear
   &:before,
@@ -69,3 +69,13 @@ $smPhone: 360px
     display: table
   &:after
     clear: both
+
+// Slightly ligthen a color
+// background: +tint(red, 50%)
+=tint($color, $percentage)
+  &return mix(white, $color, $percentage)
+
+// Slightly darken a color
+// background: +shade(red, 50%)
+=shade($color, $percentage)
+  &return mix(black, $color, $percentage)
