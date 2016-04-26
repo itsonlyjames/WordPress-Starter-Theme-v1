@@ -71,11 +71,11 @@ $smPhone: 360px
     clear: both
 
 // Slightly ligthen a color
-// background: +tint(red, 50%)
-=tint($color, $percentage)
-  &return mix(white, $color, $percentage)
+// background: tint(red, 50%)
+@function tint($color, $percentage)
+  @return mix(white, $color, $percentage)
 
 // Slightly darken a color
-// background: +shade(red, 50%)
-=shade($color, $percentage)
-  &return mix(black, $color, $percentage)
+// background: shade(red, 50%)
+@function shade($color, $percentage)
+  @return mix(black, $color, $percentage)
